@@ -70,44 +70,12 @@
     <style>
 
 
-    /* Wrapper utama untuk header */
-    .main-wrapper {
-        position: relative;
-        background-color: #FFFCF0; /* Warna cream dasar */
-        padding-bottom: 80px;
-        /* Kita buat lengkungan menggunakan clip-path agar lebih rapi */
-        clip-path: ellipse(100% 100% at 50% 0%);
-        z-index: 10;
-    }
-
-    @media (max-width: 992px) {
-        .main-wrapper {
-            clip-path: ellipse(150% 100% at 50% 0%);
-            padding-bottom: 70px;
-        }
-
-    }
-
-    /* Responsif untuk Mobile */
-    @media (max-width: 768px) {
-        .main-wrapper {
-            clip-path: ellipse(130% 100% at 50% 0%);
-            padding-bottom: 100px;
-        }
-
-    }
-    @media (max-width: 480px) {
-        .main-wrapper {
-            clip-path: ellipse(150% 100% at 50% 0%);
-            padding-bottom: 30px;
-        }
-
-    }
+    
 </style>
     
 </head>
 <body class="bg-white font-['Plus_Jakarta_Sans']">
-<nav class="sticky top-0 z-50 bg-white shadow-md">
+<nav class="sticky top-0 z-50 bg-white shadow-md ">
   <div class="mx-auto h-16 max-w-8xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <!-- Kiri: Logo dan Brand -->
@@ -395,14 +363,14 @@ window.debugModal = debugModal;
             display: none;
         }
         
-        /* Wrapper Utama (Lengkungan Bawah) */
+        /* Wrapper utama untuk header */
         .main-wrapper {
             position: relative;
-            background-color: #23355A; /* Biru Tua */
-            z-index: 10; /* Z-index lebih tinggi agar berada di atas gambar */
-            /* Memotong area bawah agar melengkung seperti senyum */
+            background-color: #23355A; /* Warna cream dasar */
+            padding-bottom: 100px;
+            /* Kita buat lengkungan menggunakan clip-path agar lebih rapi */
             clip-path: ellipse(150% 100% at 50% 0%);
-            
+            z-index: 10;
         }
 
         /* Background Oval Cream Terpisah (Lengkungan Samping) */
@@ -433,7 +401,8 @@ window.debugModal = debugModal;
         /* Responsif untuk Mobile & Tablet */
         @media (max-width: 1023px) {
             .main-wrapper {
-                clip-path: ellipse(200% 100% at 50% 0%); /* Lengkungan bawah dibuat lebih landai */
+                clip-path: ellipse(150% 100% at 50% 0%); /* Lengkungan bawah dibuat lebih landai */
+                padding-bottom: 50px !important;
             }
             .bg-oval-cream {
                 clip-path: ellipse(53% 100% at 100% 50%);
@@ -443,8 +412,16 @@ window.debugModal = debugModal;
             }
         }
 
-        @media (max-width: 768px) {
-            
+        @media (max-width: 1200px) {
+            .bg-oval-cream {
+                clip-path: ellipse(53% 100% at 100% 50%);
+            }
+        }
+        @media (max-width: 760px) {
+            .main-wrapper {
+                clip-path: ellipse(150% 100% at 50% 0%); /* Lengkungan bawah dibuat lebih landai */
+                padding-bottom: 30px !important;
+            }
         }
         @media (max-width: 480px) {
            .bg-oval-cream {
@@ -452,6 +429,7 @@ window.debugModal = debugModal;
             } 
             .main-wrapper {
                 clip-path: ellipse(150% 100% at 50% 0%); /* Lengkungan bawah dibuat lebih landai */
+                padding-bottom: 30px;
             }
             .hero-image-section {
                 margin-top: -30px;
@@ -464,9 +442,6 @@ window.debugModal = debugModal;
         <div class="bg-oval-cream shadow-sm"></div>
 
         <div class="w-full flex flex-mobile-col content-container">
-            
-            
-
             <div class="w-1/2 px-4 sm:px-8 py-2 flex flex-col justify-center items-center">
                 
                 <img src="img/TPS25/oprec.png" alt="Characters" >
@@ -489,28 +464,28 @@ window.debugModal = debugModal;
 
             <div class="w-1/2 pl-1 sm:pl-4 sm:pl-8 py-2 lg:pl-10 lg:pr-6 flex flex-col justify-center items-center">
                 <div class="align-center max-w-[520px]">
-                    <p class="text-[16px] sm:text-[20px] md:text-[28px] lg:text-[36px]  font-bold text-[#FF8B00] sm:mb-3">Welcome! We are</p>
+                    <p class="text-[16px] sm:text-[20px] md:text-[28px] lg:text-[36px]  font-bold text-[#FF8B00] md:mb-3">Welcome! We are</p>
                     <h1 class="text-[20px] sm:text-[32px] md:text-[40px] lg:text-[52px]  font-extrabold text-[#FF8B00] mb-3 sm:mb-6">Tim Petra Sinergi</h1>
                     
-                    <p class="text-[#43371E] mb-3 sm:mb-8 text-[9px] lg:text-[20px] sm:text-[12px] md:text-[16px]  font-semibold leading-relaxed max-w-lg">
+                    <p class="text-[#43371E] mb-3 sm:mb-8 text-[9px] lg:text-[20px] sm:text-[14px] md:text-[16px] font-semibold leading-relaxed max-w-lg">
                         Penyelenggara program pembinaan mahasiswa UK Petra dengan visi mengajak mahasiswa baru mulai memikirkan hidup yang berhasil dan bermakna.
                     </p>
 
                     <div class="flex flex-wrap gap-[8px] items-center">
-                        <a href="#kalender" class="bg-[#FF8B00] text-white text-[8px] md:text-[16px] font-bold px-3 py-1 rounded-lg shadow-lg hover:bg-orange-600 transition">
+                        <a href="#kalender" class="bg-[#FF8B00] text-white text-[8px] sm:text-[10px] md:text-[16px] font-bold px-3 py-1 rounded-lg shadow-lg hover:bg-orange-600 transition">
                             Castor's Calendar
                         </a>
-                        <a href="tim.html"  class=" border-2 border-[#FF8B00] text-[8px]  md:text-[16px] text-[#FF8B00] font-bold px-5 sm:px-14 py-1 rounded-lg hover:bg-[#FF8B00] hover:text-white transition">
+                        <a href="tim.html"  class=" border-2 border-[#FF8B00] text-[8px] sm:text-[10px] md:text-[16px] text-[#FF8B00] font-bold px-5 sm:px-14 py-1 rounded-lg hover:bg-[#FF8B00] hover:text-white transition">
                             Join Us 
                         </a>
                         <div class="flex gap-[8px] text-[#FF8B00] text-2xl sm:text-3xl items-center ml-[4px]">
                             <a href="https://instagram.com/timpetrasinergi" class="hover:scale-110 transition-transform duration-300 ">
-                                <svg class="w-[20px] sm:w-[40px]" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="w-[20px] md:w-[30px] lg:w-[40px]" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.3897 0C18.0624 0.00276454 18.91 0.011623 19.6424 0.0334271L19.9309 0.0428504C20.2642 0.0546963 20.5929 0.0695592 20.9893 0.0881381C22.5709 0.16122 23.6498 0.41141 24.5973 0.779272C25.577 1.15705 26.4044 1.66734 27.2305 2.49349C28.0554 3.31963 28.5658 4.14948 28.9448 5.12673C29.3113 6.07301 29.5616 7.15307 29.6359 8.73474C29.6536 9.1311 29.6679 9.45987 29.6796 9.79316L29.689 10.0816C29.7107 10.814 29.7206 11.6618 29.7238 13.3345L29.725 14.4427C29.7251 14.5781 29.7251 14.7178 29.7251 14.862L29.725 15.2813L29.7241 16.3896C29.7212 18.0623 29.7125 18.9101 29.6906 19.6424L29.6811 19.9309C29.6694 20.2643 29.6545 20.5931 29.6359 20.9893C29.5628 22.571 29.3113 23.6498 28.9448 24.5973C28.567 25.5771 28.0554 26.4045 27.2305 27.2306C26.4044 28.0555 25.5733 28.5658 24.5973 28.9448C23.6498 29.3115 22.5709 29.5616 20.9893 29.6359C20.5929 29.6536 20.2642 29.668 19.9309 29.6796L19.6424 29.689C18.91 29.7108 18.0624 29.7206 16.3897 29.7239L15.2813 29.7251C15.1459 29.7251 15.0062 29.7251 14.862 29.7251H14.4428L13.3344 29.7241C11.6617 29.7214 10.814 29.7125 10.0816 29.6906L9.79313 29.6813C9.45983 29.6694 9.13106 29.6545 8.73472 29.6359C7.15304 29.5629 6.07547 29.3115 5.12671 28.9448C4.14822 28.5671 3.3196 28.0555 2.49347 27.2306C1.66734 26.4045 1.15828 25.5734 0.77927 24.5973C0.411409 23.6498 0.162453 22.571 0.0881382 20.9893C0.0704809 20.5931 0.0560784 20.2643 0.0444109 19.9309L0.0350621 19.6424C0.0133174 18.9101 0.0034039 18.0623 0.000193482 16.3896L0 13.3345C0.00276453 11.6618 0.0116081 10.814 0.0334122 10.0816L0.0428503 9.79316C0.0546961 9.45987 0.0695594 9.1311 0.0881382 8.73474C0.161205 7.15182 0.411409 6.07425 0.77927 5.12673C1.15703 4.14824 1.66734 3.31963 2.49347 2.49349C3.3196 1.66734 4.14947 1.15828 5.12671 0.779272C6.07423 0.41141 7.1518 0.162454 8.73472 0.0881381C9.13106 0.0704956 9.45983 0.0560934 9.79313 0.0444259L10.0816 0.0350767C10.814 0.0133171 11.6617 0.00340356 13.3344 0.000193128L16.3897 0ZM14.862 7.43051C10.7555 7.43051 7.43049 10.7591 7.43049 14.862C7.43049 18.9685 10.7591 22.2936 14.862 22.2936C18.9686 22.2936 22.2936 18.965 22.2936 14.862C22.2936 10.7555 18.9648 7.43051 14.862 7.43051ZM14.862 10.4031C17.3247 10.4031 19.321 12.3987 19.321 14.862C19.321 17.3247 17.3253 19.3209 14.862 19.3209C12.3994 19.3209 10.4031 17.3254 10.4031 14.862C10.4031 12.3993 12.3986 10.4031 14.862 10.4031ZM22.6651 5.20104C21.6406 5.20104 20.8073 6.03324 20.8073 7.05766C20.8073 8.0821 21.6394 8.91558 22.6651 8.91558C23.6895 8.91558 24.523 8.0834 24.523 7.05766C24.523 6.03324 23.6882 5.19976 22.6651 5.20104Z" fill="#FF8B00"/>
                                 </svg>
                             </a>   
                             <a href="https://line.me/R/ti/p/@szg5752d" class="hover:scale-110 transition-transform duration-300 ">
-                                <svg class="h-[20px] sm:h-[40px]" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="h-[20px] md:h-[30px] lg:h-[40px]" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M27.442 12.9037C27.442 13.3524 27.0563 13.7231 26.5774 13.7231H24.1687V15.1861H26.5774C27.0563 15.1861 27.442 15.5541 27.442 16.0055C27.442 16.4527 27.0563 16.8234 26.5774 16.8234H23.3026C22.8291 16.8234 22.4421 16.4527 22.4421 16.0055V9.80064C22.4421 9.35197 22.8291 8.98132 23.3067 8.98132H26.5815C27.0563 8.98132 27.442 9.35197 27.442 9.80064C27.442 10.2545 27.0563 10.62 26.5774 10.62H24.1687V12.083H26.5774C27.0563 12.083 27.442 12.4537 27.442 12.9037ZM20.6937 16.7805C20.6058 16.8078 20.5111 16.8209 20.4205 16.8209C20.1309 16.8209 19.8839 16.7038 19.7205 16.4956L16.3677 12.182V16.0055C16.3677 16.4527 15.9848 16.8234 15.5018 16.8234C15.0268 16.8234 14.6426 16.4527 14.6426 16.0055V9.80064C14.6426 9.44951 14.88 9.13738 15.2327 9.02684C15.315 8.99693 15.4194 8.98393 15.499 8.98393C15.7666 8.98393 16.0136 9.11919 16.1783 9.31426L19.5573 13.645V9.80064C19.5573 9.35197 19.9443 8.98132 20.422 8.98132C20.8955 8.98132 21.2866 9.35197 21.2866 9.80064V16.0055C21.2866 16.3566 21.0478 16.6687 20.6937 16.7805ZM12.5414 16.8234C12.0679 16.8234 11.6808 16.4527 11.6808 16.0055V9.80064C11.6808 9.35197 12.0679 8.98132 12.5455 8.98132C13.0203 8.98132 13.4074 9.35197 13.4074 9.80064V16.0055C13.4074 16.4527 13.0203 16.8234 12.5414 16.8234ZM10.0229 16.8234H6.74829C6.2748 16.8234 5.88366 16.4527 5.88366 16.0055V9.80064C5.88366 9.35197 6.2748 8.98132 6.74829 8.98132C7.2259 8.98132 7.61293 9.35197 7.61293 9.80064V15.1861H10.0229C10.5005 15.1861 10.8862 15.5541 10.8862 16.0055C10.8862 16.4527 10.4992 16.8234 10.0229 16.8234ZM16.4693 0C7.3906 0 0 5.68453 0 12.6696C0 18.9263 5.86032 24.1687 13.7725 25.1648C14.3091 25.2716 15.0391 25.5004 15.2244 25.9322C15.3891 26.3236 15.3329 26.9283 15.2766 27.3367L15.0515 28.6633C14.9897 29.0547 14.7221 30.2056 16.4912 29.5021C18.263 28.8011 25.983 24.1987 29.4415 20.431C31.8077 17.9743 32.9386 15.4578 32.9386 12.6696C32.9386 5.68453 25.548 0 16.4693 0Z" fill="#FF8B00"/>
                                 </svg>
                             </a> 
