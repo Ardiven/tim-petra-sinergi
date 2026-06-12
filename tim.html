@@ -426,14 +426,14 @@ window.debugModal = debugModal;
     </section>
 
     <section class="mx-auto px-7 lg:px-12 py-10">
-        <h2 class="text-[64px] font-bold text-brand mb-10">Struktur<br>Organisasi</h2>
+        <h2 class="text-[46px] sm:text-[64px] font-bold text-brand mb-10">Struktur<br>Organisasi</h2>
         <div class="w-full flex justify-center">
             <img src="img/TPS25/icon/struktur-organisasi.png" alt="Struktur Organisasi" class="w-full max-w-5xl rounded-lg">
         </div>
     </section>
 
     <section class="mx-auto px-7 lg:px-12 py-20">
-        <h2 class="text-[64px] font-bold text-brand mb-10">Our Team</h2>
+        <h2 class="text-[46px] sm:text-[64px] font-bold text-brand mb-10">Our Team</h2>
         <div id="team-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
         </div>
     </section>
@@ -582,16 +582,24 @@ window.debugModal = debugModal;
                                 </div>
                                 <div class="text-[#F58220] font-bold text-[24px] w-3/4 leading-tight mb-2">${team.name}</div>
                                 
-                                <svg class="absolute right-6 bottom-0 transform transition-transform duration-300 group-open:-rotate-90" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="absolute right-6 bottom-4 transform transition-transform duration-300 group-open:-rotate-180" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.9998 15.9155L21.1871 9.93457L22.9548 11.6434L14.9998 19.3333L7.04492 11.6434L8.81268 9.93457L14.9998 15.9155Z" fill="#FF8B00"/>
                                 </svg>
                             </div>
                         </summary>
                         
-                        <div class="p-6 pt-2 text-[#70654B] text-[16px] leading-relaxed border-t border-gray-50 mt-2">
-                            ${descriptionsHtml}
-                            ${skillsBlock}
-                            ${competenciesBlock}
+                        <div class="p-6 pt-2 text-[#70654B] text-[16px] leading-relaxed border-t border-gray-50 mt-2 flex flex-col h-full">
+                            <div class="flex-grow">
+                                ${descriptionsHtml}
+                                ${skillsBlock}
+                                ${competenciesBlock}
+                            </div>
+                            
+                            <div class="mt-6">
+                                <a href="petra.id/OpenRecruitmentTPS" class="block w-full bg-[#FF8B00] text-white text-center font-bold py-3 rounded-lg shadow hover:bg-orange-600 transition-colors duration-300">
+                                    Daftar Divisi ${team.name}
+                                </a>
+                            </div>
                         </div>
                     </details>
                 `;
